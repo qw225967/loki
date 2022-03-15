@@ -1,1 +1,25 @@
-<mxfile host="app.diagrams.net" modified="2022-03-15T05:52:23.695Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" version="17.1.0" etag="_Z5rSrFRHxxAaAf7uWDA" type="github"><diagram id="pEyk-_Az9q7_5AhkmGsW">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-03-15T05:59:25.307Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="BCm9hkeMxD3JoeOpSXps" version="17.1.0" type="github">
+  <diagram id="pEyk-_Az9q7_5AhkmGsW" name="Page-1">
+    <mxGraphModel dx="2066" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JfI4wem6tGiwtNRarIrx-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="250" width="1270" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="JfI4wem6tGiwtNRarIrx-2" value="zp-sdk-rtc" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="260" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JfI4wem6tGiwtNRarIrx-3" value="推流" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="210" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JfI4wem6tGiwtNRarIrx-4" value="media_controller&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="300" width="710" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JfI4wem6tGiwtNRarIrx-5" value="&lt;pre style=&quot;font-family: &amp;#34;jetbrains mono&amp;#34; , monospace ; font-size: 13px&quot;&gt;&lt;pre style=&quot;font-family: &amp;#34;jetbrains mono&amp;#34; , monospace&quot;&gt;&lt;font color=&quot;#330000&quot; style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;std::unique_ptr&amp;lt;zp_webrtc::NebulaMediaChannelPlayControl&amp;gt; nebulaMediaChannelPlayControl_;&lt;br&gt;std::unique_ptr&amp;lt;webrtc::INebulaPushlishChannelHelper&amp;gt; pushlish_channel_helper;&lt;/font&gt;&lt;/pre&gt;&lt;/pre&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="110" y="360" width="710" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
