@@ -1,1 +1,39 @@
-<mxfile host="app.diagrams.net" modified="2022-06-01T05:40:30.388Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" version="18.2.0" etag="39uJyR7QqUBDEMKoYMB3" type="github"><diagram id="_NHjwosDGQX1MkrSytQd">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-06-01T08:19:02.013Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" etag="Lu6W9jPApC5qNf7q9xGw" version="18.2.0" type="github">
+  <diagram id="_NHjwosDGQX1MkrSytQd" name="Page-1">
+    <mxGraphModel dx="2893" dy="2298" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YtjZdM_MjSrcRYexida5-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="-30" width="1690" height="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="YtjZdM_MjSrcRYexida5-2" value="audio translation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-260" y="170" width="120" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="YtjZdM_MjSrcRYexida5-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="YtjZdM_MjSrcRYexida5-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-120" y="394.5" as="sourcePoint" />
+            <mxPoint x="-10" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YtjZdM_MjSrcRYexida5-5" value="结果数组&lt;br&gt;对语音时长排序" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YtjZdM_MjSrcRYexida5-4">
+          <mxGeometry x="-0.2182" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YtjZdM_MjSrcRYexida5-6" value="分散选取出多组语音数据&lt;br&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="347.5" width="280" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="YtjZdM_MjSrcRYexida5-7" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YtjZdM_MjSrcRYexida5-6" target="YtjZdM_MjSrcRYexida5-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="550" as="sourcePoint" />
+            <mxPoint x="440" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YtjZdM_MjSrcRYexida5-8" value="c++ 计算模块，包含：&lt;br&gt;1.截取音频；&lt;br&gt;2.评分；" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="530" y="220" width="350" height="350" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
