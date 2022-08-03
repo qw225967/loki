@@ -9,6 +9,8 @@
 
 package main
 
+import "fmt"
+
 type DataArr struct {
 	EndTime         uint64
 	SilenceDuration uint64
@@ -23,7 +25,7 @@ func cutAudioScoreArr(Sentences []DataArr) []DataArr {
 	var res     []DataArr
 
 	// 1.init filter params
-	interval := uint64(10000) // 30s，单位ms
+	interval := uint64(5000) // 30s，单位ms
 
 	// 2.get filter params from apollo
 
@@ -58,7 +60,7 @@ func cutAudioScoreArr(Sentences []DataArr) []DataArr {
 			// 之前的静默时间加上当前的静默时间
 			silence += Sentences[i].SilenceDuration
 			temp := DataArr{
-				BeginTime:       begin/1000,
+				BeginTime:       begin,
 				EndTime:         Sentences[i].EndTime,
 				SilenceDuration: silence,
 			}
@@ -72,47 +74,43 @@ func cutAudioScoreArr(Sentences []DataArr) []DataArr {
 
 	}
 
-	return res
+	var res2 []DataArr
+	for _, v := range res {
+		if v.EndTime-v.SilenceDuration-v.BeginTime > interval &&
+			(1-float64(v.SilenceDuration)/float64(v.EndTime-v.BeginTime)) > 0.7 {
+			res2 = append(res2, v)
+		}
+	}
+
+	return res2
 }
 
 
 func main() {
 	var arr []DataArr
-	temp1 := DataArr{
-		BeginTime: 1212,
-		EndTime: 3222,
-		SilenceDuration: 572,
-	}
-	temp2 := DataArr{
-		BeginTime: 5212,
-		EndTime: 9222,
-		SilenceDuration: 572,
-	}
-	temp3 := DataArr{
-		BeginTime: 12102,
-		EndTime: 13222,
-		SilenceDuration: 572,
-	}
-	temp4 := DataArr{
-		BeginTime: 21212,
-		EndTime: 23222,
-		SilenceDuration: 572,
-	}
-	temp5 := DataArr{
-		BeginTime: 26212,
-		EndTime: 33222,
-		SilenceDuration: 572,
-	}
-	temp6 := DataArr{
-		BeginTime: 36212,
-		EndTime: 39222,
-		SilenceDuration: 572,
-	}
-	temp7 := DataArr{
-		BeginTime: 41212,
-		EndTime: 43222,
-		SilenceDuration: 572,
-	}
+	temp1 := DataArr{BeginTime:2870, EndTime:3580, SilenceDuration:2     }
+	temp2 := DataArr{BeginTime:24810, EndTime:37010, SilenceDuration:21  }
+	temp3 := DataArr{BeginTime:44530, EndTime:55140, SilenceDuration:7   }
+	temp4 := DataArr{BeginTime:55450, EndTime:61220, SilenceDuration:0   }
+	temp5 := DataArr{BeginTime:62060, EndTime:73677, SilenceDuration:0   }
+	temp6 := DataArr{BeginTime:73677, EndTime:88620, SilenceDuration:0   }
+	temp7 := DataArr{BeginTime:89550, EndTime:91052, SilenceDuration:0   }
+	temp8 := DataArr{BeginTime:91052, EndTime:91720, SilenceDuration:0   }
+	temp9 := DataArr{BeginTime:95990, EndTime:106307, SilenceDuration:4  }
+	temp10 := DataArr{BeginTime:106307, EndTime:110600, SilenceDuration:0 }
+	temp11 := DataArr{BeginTime:110780, EndTime:115460, SilenceDuration:0 }
+	temp12 := DataArr{BeginTime:126920, EndTime:128080, SilenceDuration:11}
+	temp13 := DataArr{BeginTime:131260, EndTime:134120, SilenceDuration:3 }
+	temp14 := DataArr{BeginTime:155630, EndTime:156800, SilenceDuration:21}
+	temp15 := DataArr{BeginTime:161660, EndTime:163640, SilenceDuration:4 }
+	temp16 := DataArr{BeginTime:177100, EndTime:177790, SilenceDuration:13}
+	temp17 := DataArr{BeginTime:206640, EndTime:207290, SilenceDuration:28}
+	temp18 := DataArr{BeginTime:221380, EndTime:222340, SilenceDuration:14}
+	temp19 := DataArr{BeginTime:259190, EndTime:260230, SilenceDuration:36}
+	temp20 := DataArr{BeginTime:299030, EndTime:299680, SilenceDuration:38}
+	temp21 := DataArr{BeginTime:325540, EndTime:329540, SilenceDuration:25}
+	temp22 := DataArr{BeginTime:335620, EndTime:336410, SilenceDuration:6 }
+	temp23 := DataArr{BeginTime:339510, EndTime:341650, SilenceDuration:3 }
 	arr = append(arr, temp1)
 	arr = append(arr, temp2)
 	arr = append(arr, temp3)
@@ -120,7 +118,34 @@ func main() {
 	arr = append(arr, temp5)
 	arr = append(arr, temp6)
 	arr = append(arr, temp7)
+	arr = append(arr, temp8)
+	arr = append(arr, temp9)
+	arr = append(arr, temp10)
+	arr = append(arr, temp11)
+	arr = append(arr, temp12)
+	arr = append(arr, temp13)
+	arr = append(arr, temp14)
+	arr = append(arr, temp15)
+	arr = append(arr, temp16)
+	arr = append(arr, temp17)
+	arr = append(arr, temp18)
+	arr = append(arr, temp19)
+	arr = append(arr, temp20)
+	arr = append(arr, temp21)
+	arr = append(arr, temp22)
+	arr = append(arr, temp23)
 
 	_ = cutAudioScoreArr(arr)
 
+	sampleCount := 1
+
+	dropCount := uint64(len(arr)/sampleCount)
+	var zoomArr  []DataArr
+	for i:=0;i<len(arr);i++ {
+		zoomArr = append(zoomArr, arr[i])
+		for j:=0;j<int(dropCount);j++ {
+			i++
+		}
+	}
+	fmt.Println(len(zoomArr))
 }
