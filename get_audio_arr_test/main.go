@@ -25,7 +25,7 @@ func cutAudioScoreArr(Sentences []DataArr) []DataArr {
 	var res     []DataArr
 
 	// 1.init filter params
-	interval := uint64(5000) // 30s，单位ms
+	interval := uint64(15000) // 30s，单位ms
 
 	// 2.get filter params from apollo
 
@@ -41,27 +41,37 @@ func cutAudioScoreArr(Sentences []DataArr) []DataArr {
 			begin = Sentences[i].BeginTime
 		}
 
-		// 上一段结束时间计算
-		if preEnd != 0 {
-			// 当前段开始减去上一段结束等于静默时间
-			silence = Sentences[i].BeginTime - preEnd + silence
-		}
-
 		// 多段累加，小于统计时长则继续累计
 		if Sentences[i].EndTime - begin < interval {
-			// 加上当前段的静音时长
-			silence += Sentences[i].SilenceDuration
+			// 上一段结束时间计算
+			if preEnd != 0 {
+				// 当前段开始减去上一段结束等于静默时间
+				silence = Sentences[i].BeginTime - preEnd + silence
+			}
 
 			// 更新结束时间，提供下一个段的开始减去它得到无人声段
 			preEnd = Sentences[i].EndTime
 
-			// 累计足够了则停下
+		// 累计足够了则停下
 		} else {
-			// 之前的静默时间加上当前的静默时间
-			silence += Sentences[i].SilenceDuration
+			// 如果这一段开始前也大于了间隔 interval，那么截断
+			if Sentences[i].BeginTime - begin > interval {
+				// 剩余的全是静音
+				silence += interval - (preEnd - begin)
+				// 偏移到截断位置
+				preEnd += interval - (preEnd - begin)
+			} else {
+				// 先计算中间段的静音时长
+				silence += Sentences[i].BeginTime - preEnd
+				// 偏移尾到当前头
+				preEnd = Sentences[i].BeginTime
+				// 再计算截断位置
+				preEnd += interval - (preEnd - begin)
+			}
+
 			temp := DataArr{
 				BeginTime:       begin,
-				EndTime:         Sentences[i].EndTime,
+				EndTime:         preEnd,
 				SilenceDuration: silence,
 			}
 			res = append(res, temp)
@@ -71,7 +81,6 @@ func cutAudioScoreArr(Sentences []DataArr) []DataArr {
 			silence = 0
 			preEnd = 0
 		}
-
 	}
 
 	var res2 []DataArr
