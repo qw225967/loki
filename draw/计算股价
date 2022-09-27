@@ -1,1 +1,88 @@
-<mxfile host="app.diagrams.net" modified="2022-09-27T07:57:09.294Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" version="20.3.6" etag="8mYKstqCKv4Xq_aEwGrV" type="github"><diagram id="uMeK2RlmjY2XV4nzsiPv">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-09-27T08:03:14.295Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="XK0TeTwK_3hL3nCJvKzf" version="20.3.6" type="github">
+  <diagram id="uMeK2RlmjY2XV4nzsiPv" name="第 1 页">
+    <mxGraphModel dx="4360" dy="1455" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-3" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-660" y="700" as="sourcePoint" />
+            <mxPoint x="-660" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-4" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;原价：10元&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-5" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;现价：5元&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-6" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-390" y="700" as="sourcePoint" />
+            <mxPoint x="-390" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-7" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;原价：5元&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-450" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-8" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;现价：10元&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-450" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-10" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=16;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-600" y="800" as="sourcePoint" />
+            <mxPoint x="-450" y="800" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-520" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-11" value="板块轮动&lt;br&gt;资金转移" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="b5Db_eMKZGrXSqYhyTA0-10">
+          <mxGeometry x="-0.1133" y="-3" relative="1" as="geometry">
+            <mxPoint y="-33" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-12" value="能源" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-690" y="570" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-13" value="半导体" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-425" y="570" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-14" value="500元资金转移" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-590" y="670" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.575;entryY=-0.03;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=16;" edge="1" parent="1" source="b5Db_eMKZGrXSqYhyTA0-15" target="b5Db_eMKZGrXSqYhyTA0-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-23" value="- 50%" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="b5Db_eMKZGrXSqYhyTA0-22">
+          <mxGeometry x="-0.1352" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-15" value="100个韭菜持有&lt;br&gt;共 1000元" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-860" y="615" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-16" value="100个韭菜抛售&lt;br&gt;共 500元" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-870" y="945" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" edge="1" parent="1" source="b5Db_eMKZGrXSqYhyTA0-17" target="b5Db_eMKZGrXSqYhyTA0-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-21" value="+ 100%" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" vertex="1" connectable="0" parent="b5Db_eMKZGrXSqYhyTA0-20">
+          <mxGeometry x="-0.0833" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-17" value="1个庄家持有500元" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-325" y="625" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-18" value="1个庄家持有1000元" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-325" y="955" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b5Db_eMKZGrXSqYhyTA0-24" value="结论：每一个韭菜割50%就有一个庄家赚翻倍" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-827" y="1060" width="340" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
